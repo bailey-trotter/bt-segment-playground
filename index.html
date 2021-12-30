@@ -718,13 +718,13 @@
       }
     }
 
-    function trackClick(planType, planPrice, currency) {
-      console.log(analytics.context)
+   function trackClick(planType, planPrice, currency) {
+      console.log({...analytics.context})
       analytics.track('Plan Clicked', {
         planType,
         planPrice,
         currency,
-        order_id: Math.floor(Math.random() * 10),
+        order_id: Math.floor(Math.random() * 10)},{
         context: {
           campaign: {
             name: 'test',
