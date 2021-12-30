@@ -719,6 +719,7 @@
     }
 
     function trackClick(planType, planPrice, currency) {
+      console.log(analytics.context)
       analytics.track('Plan Clicked', {
         planType,
         planPrice,
